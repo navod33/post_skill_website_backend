@@ -336,7 +336,7 @@ router.delete('/education/:edu_id', auth, async (req, res) => {
     foundProfile.education.splice(removeIndex, 1);
     await foundProfile.save();
     
-    return res.status(200).json(foundProfile);
+    return res.status(200).json(foundProfile);  
   } catch (error) {
     console.error(error);
     return res.status(500).json({ msg: 'Server error' });
